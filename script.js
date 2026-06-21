@@ -16,7 +16,40 @@ document.querySelectorAll('.section, .hobby-card, .about-card').forEach((el) => 
   observer.observe(el);
 });
 
-// Smooth active nav link highlight on scroll
+// ── Modal ──
+const researchCard  = document.getElementById('researchCard');
+const researchModal = document.getElementById('researchModal');
+const modalClose    = document.getElementById('modalClose');
+
+function openModal() {
+  researchModal.removeAttribute('hidden');
+  document.body.style.overflow = 'hidden';
+  modalClose.focus();
+}
+
+function closeModal() {
+  researchModal.setAttribute('hidden', '');
+  document.body.style.overflow = '';
+  researchCard.focus();
+}
+
+researchCard.addEventListener('click', openModal);
+
+researchCard.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
+});
+
+modalClose.addEventListener('click', closeModal);
+
+researchModal.addEventListener('click', (e) => {
+  if (e.target === researchModal) closeModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !researchModal.hasAttribute('hidden')) closeModal();
+});
+
+// ── Smooth active nav link highlight on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('nav ul a');
 

@@ -126,8 +126,8 @@
         </div>
       </div>
 
-      <!-- Research Project - Featured -->
-      <div class="project-card project-featured">
+      <!-- Research Project - Featured (clickable) -->
+      <div class="project-card project-featured project-clickable" id="researchCard" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="project-header">
           <div class="project-title-group">
             <span class="project-icon">⚡</span>
@@ -147,44 +147,24 @@
           heart rate, and long-term risks.
         </p>
 
-        <div class="media-grid">
-
-          <!-- Paper -->
-          <div class="media-card">
-            <div class="media-placeholder media-paper">
-              <div class="media-icon-wrap">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              </div>
-              <span class="media-upload-label">Paper coming soon</span>
-            </div>
-            <p class="media-title">Research Paper</p>
-            <p class="media-sub">Full written report</p>
+        <div class="card-preview-media">
+          <div class="preview-pill preview-paper">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Research Paper
           </div>
-
-          <!-- Slides -->
-          <div class="media-card">
-            <div class="media-placeholder media-slides">
-              <div class="media-icon-wrap">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              </div>
-              <span class="media-upload-label">Slides coming soon</span>
-            </div>
-            <p class="media-title">Presentation Slides</p>
-            <p class="media-sub">Visual slide deck</p>
+          <div class="preview-pill preview-slides">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Slides
           </div>
-
-          <!-- Video -->
-          <div class="media-card">
-            <div class="media-placeholder media-video">
-              <div class="media-icon-wrap">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-              </div>
-              <span class="media-upload-label">Video coming soon</span>
-            </div>
-            <p class="media-title">Video Presentation</p>
-            <p class="media-sub">Recorded walkthrough</p>
+          <div class="preview-pill preview-video">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            Video
           </div>
+        </div>
 
+        <div class="view-details-hint">
+          <span>View full project</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
       </div>
 
@@ -202,6 +182,74 @@
   <footer>
     <p>Made with ❤️ by Benjamin · Class of 2029 · Mills High School</p>
   </footer>
+
+  <!-- Research Modal -->
+  <div id="researchModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Energy Drinks & Teen Athletes project" hidden>
+    <div class="modal-box">
+
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="modal-hero">
+        <div class="modal-icon">⚡</div>
+        <div>
+          <div class="modal-badges">
+            <span class="featured-badge">Research</span>
+            <span class="tag-pill">Health</span>
+            <span class="tag-pill">Sports Science</span>
+            <span class="tag-pill">Teen Athletes</span>
+          </div>
+          <h2 class="modal-title">Energy Drinks &amp; Teen Athletes</h2>
+          <p class="modal-desc">
+            An in-depth research paper exploring how energy drinks affect the performance,
+            health, and recovery of teenage athletes — covering caffeine, hydration,
+            heart rate, and long-term risks.
+          </p>
+        </div>
+      </div>
+
+      <div class="modal-divider"></div>
+
+      <h3 class="modal-section-label">Project Materials</h3>
+      <div class="modal-media-grid">
+
+        <div class="modal-media-card">
+          <div class="modal-media-placeholder media-paper">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span class="modal-upload-label">Paper coming soon</span>
+          </div>
+          <div class="modal-media-info">
+            <p class="media-title">Research Paper</p>
+            <p class="media-sub">Full written report with citations and findings</p>
+          </div>
+        </div>
+
+        <div class="modal-media-card">
+          <div class="modal-media-placeholder media-slides">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span class="modal-upload-label">Slides coming soon</span>
+          </div>
+          <div class="modal-media-info">
+            <p class="media-title">Presentation Slides</p>
+            <p class="media-sub">Visual slide deck with data and graphics</p>
+          </div>
+        </div>
+
+        <div class="modal-media-card">
+          <div class="modal-media-placeholder media-video">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            <span class="modal-upload-label">Video coming soon</span>
+          </div>
+          <div class="modal-media-info">
+            <p class="media-title">Video Presentation</p>
+            <p class="media-sub">Recorded walkthrough of the research</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
