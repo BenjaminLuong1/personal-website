@@ -236,6 +236,78 @@ nav ul a:hover { color: var(--text); }
   letter-spacing: 0.05em;
 }
 
+/* ── Awards ── */
+.awards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.award-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem 2rem;
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+  box-shadow: 0 2px 12px rgba(59,158,255,0.06);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.award-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(59,158,255,0.13);
+  border-color: rgba(59,158,255,0.28);
+}
+
+.award-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: rgba(59,158,255,0.08);
+  border: 1px solid rgba(59,158,255,0.18);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.award-icon { font-size: 1.7rem; line-height: 1; }
+
+.award-info { flex: 1; }
+
+.award-year {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.35rem;
+}
+
+.award-info h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.award-org {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.award-desc {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
 /* ── Hobbies ── */
 .hobbies { background: var(--mid); border-radius: var(--radius); }
 
