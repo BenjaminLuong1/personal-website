@@ -111,36 +111,39 @@ nav ul a:hover { color: var(--text); }
 /* ── Hero Art ── */
 .hero-art {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 380px;
   flex-shrink: 0;
 }
 
-.blob {
+.photo-ring {
   position: absolute;
-  inset: 0;
-  border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
-  background: linear-gradient(135deg, rgba(59,158,255,0.3), rgba(126,200,255,0.15));
-  animation: morph 6s ease-in-out infinite;
+  inset: -6px;
+  border-radius: 44% 56% 52% 48% / 48% 44% 56% 52%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  opacity: 0.35;
+  animation: morph 7s ease-in-out infinite;
+  z-index: 0;
 }
 
 @keyframes morph {
-  0%, 100% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; }
-  33%       { border-radius: 40% 60% 45% 55% / 60% 40% 60% 40%; }
-  66%       { border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%; }
+  0%, 100% { border-radius: 44% 56% 52% 48% / 48% 44% 56% 52%; }
+  33%       { border-radius: 56% 44% 48% 52% / 52% 56% 44% 48%; }
+  66%       { border-radius: 48% 52% 56% 44% / 44% 52% 48% 56%; }
 }
 
-.initials {
+.hero-photo {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 7rem;
-  font-weight: 900;
-  color: var(--accent);
-  text-shadow: 0 0 60px rgba(59, 158, 255, 0.3);
-  user-select: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 42% 58% 50% 50% / 46% 46% 54% 54%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 12px 40px rgba(59, 158, 255, 0.2);
+  z-index: 1;
+  animation: morph 7s ease-in-out infinite;
 }
 
 /* ── Buttons ── */
@@ -699,8 +702,7 @@ nav ul a.active { color: var(--text); }
   }
 
   .subtitle { margin: 0 auto 2rem; }
-  .hero-art { width: 200px; height: 200px; }
-  .initials { font-size: 5rem; }
+  .hero-art { width: 220px; height: 280px; }
   nav { padding: 1rem 1.5rem; }
   nav ul { gap: 1rem; }
   .section { padding: 4rem 1.5rem; }
