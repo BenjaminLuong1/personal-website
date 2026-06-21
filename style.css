@@ -278,6 +278,13 @@ nav ul a:hover { color: var(--text); }
   gap: 1.5rem;
 }
 
+/* Featured card spans full width */
+.project-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(137, 243, 54, 0.06) 0%, rgba(57, 211, 83, 0.04) 100%);
+  border-color: rgba(137, 243, 54, 0.3);
+}
+
 .project-card {
   background: var(--card);
   border: 1px solid rgba(137, 243, 54, 0.15);
@@ -293,6 +300,101 @@ nav ul a:hover { color: var(--text); }
 
 .project-coming-soon {
   opacity: 0.6;
+}
+
+.project-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.featured-badge {
+  background: rgba(137, 243, 54, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(137, 243, 54, 0.35);
+  border-radius: 100px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.project-desc {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 1.8rem;
+  max-width: 680px;
+}
+
+/* ── Media Grid ── */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.media-card { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.media-placeholder {
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: 2px dashed;
+  transition: border-color 0.25s, background 0.25s;
+  cursor: default;
+}
+
+.media-paper {
+  background: rgba(137, 243, 54, 0.04);
+  border-color: rgba(137, 243, 54, 0.2);
+  color: var(--accent);
+}
+
+.media-slides {
+  background: rgba(100, 180, 255, 0.04);
+  border-color: rgba(100, 180, 255, 0.2);
+  color: #64b4ff;
+}
+
+.media-video {
+  background: rgba(255, 101, 132, 0.04);
+  border-color: rgba(255, 101, 132, 0.2);
+  color: #ff6584;
+}
+
+.media-placeholder:hover { filter: brightness(1.15); }
+
+.media-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.media-upload-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  opacity: 0.55;
+  letter-spacing: 0.02em;
+}
+
+.media-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.media-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
 }
 
 .project-header {
@@ -414,4 +516,5 @@ nav ul a.active { color: var(--text); }
   nav ul { gap: 1rem; }
   .section { padding: 4rem 1.5rem; }
   .stats { gap: 1.2rem; }
+  .media-grid { grid-template-columns: 1fr; }
 }
