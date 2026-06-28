@@ -16,7 +16,6 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#awards">Awards</a></li>
-      <li><a href="#hobbies">Hobbies</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#sports">Sports</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -42,12 +41,15 @@
     <h2>About Me</h2>
     <div class="about-card">
       <p>
-        Hi, my name is Benjamin. I'm going into <strong>Mills High School</strong>
-        next year as a freshman. I am excited to meet new friends and explore a new environment.
+        Hi, I'm Benjamin. I'm a part of the class of 2030 and going to <strong>Mills High School</strong>
+        next year. I love being outside, whether it's hanging out with friends, playing sports like
+        basketball or volleyball, or swimming to cool off.
       </p>
       <p>
-        If I'm not in school I might be hanging out with friends, playing video games or playing basketball.
-        I made this site to share a little bit about who I am, I hope you enjoy it!
+        Some of the key milestones of my life are playing for Ambassadors, a team supporting Christ,
+        playing for my middle school team, and completing a civics and government class where I got to
+        meet Mayor, Anders Fung. Some of my recent projects are making a slideshow and research
+        paper about the risks of energy drinks for teens.
       </p>
     </div>
   </section>
@@ -57,7 +59,7 @@
     <h2>Awards &amp; Achievements</h2>
     <div class="awards-grid">
 
-      <div class="award-card">
+      <div class="award-card award-card-clickable" id="certCard" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="award-icon-wrap">
           <span class="award-icon">🎓</span>
         </div>
@@ -66,6 +68,7 @@
           <h3>Certificate of Promotion</h3>
           <p class="award-org">Taylor Middle School</p>
           <p class="award-desc">Earned a Certificate of Promotion upon graduating from Taylor Middle School, marking the completion of middle school and the start of the next chapter.</p>
+          <span class="award-view-hint">Click to view photo</span>
         </div>
       </div>
 
@@ -82,7 +85,7 @@
       </div>
 
 
-      <div class="award-card">
+      <div class="award-card award-card-clickable" id="civicsCard" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="award-icon-wrap">
           <span class="award-icon">🏛️</span>
         </div>
@@ -91,45 +94,8 @@
           <h3>Civics and Government Program</h3>
           <p class="award-org">US Branches, Bills &amp; Laws</p>
           <p class="award-desc">Completed a class covering the US branches of government, how bills are introduced, debated, and signed into law. As part of the program, had the opportunity to briefly meet the mayor, gaining a firsthand look at local government in action.</p>
+          <span class="award-view-hint">Click to view photo</span>
         </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Hobbies -->
-  <section id="hobbies" class="section hobbies">
-    <h2>My Hobbies</h2>
-    <div class="hobby-grid">
-
-      <div class="hobby-card">
-        <div class="hobby-icon">🎮</div>
-        <h3>Video Games</h3>
-        <p>
-          Gaming is my go-to way to unwind and compete. Whether it's an
-          intense multiplayer session or exploring an open world, I'm always
-          down to play.
-        </p>
-      </div>
-
-      <div class="hobby-card">
-        <div class="hobby-icon">🏊</div>
-        <h3>Swimming</h3>
-        <p>
-          There's nothing like being in the water. Swimming keeps me active
-          and focused, and I love the feeling after a great practice in the
-          pool.
-        </p>
-      </div>
-
-      <div class="hobby-card">
-        <div class="hobby-icon">👥</div>
-        <h3>Hanging Out</h3>
-        <p>
-          Good friends make everything better. I love spending time with my
-          crew, whether we're going somewhere or just hanging around doing
-          nothing.
-        </p>
       </div>
 
     </div>
@@ -139,23 +105,6 @@
   <section id="projects" class="section projects">
     <h2>My Projects</h2>
     <div class="project-grid">
-
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-icon">🌐</span>
-          <div class="project-links">
-            <a href="https://benjaminluong1.github.io/personal-website/" target="_blank" class="project-link">Live</a>
-            <a href="https://github.com/BenjaminLuong1/personal-website" target="_blank" class="project-link">GitHub</a>
-          </div>
-        </div>
-        <h3>Personal Website</h3>
-        <p>My own corner of the internet, built from scratch with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
-        <div class="project-tags">
-          <span class="tag-pill">HTML</span>
-          <span class="tag-pill">CSS</span>
-          <span class="tag-pill">JavaScript</span>
-        </div>
-      </div>
 
       <!-- Research Project - Featured (clickable) -->
       <div class="project-card project-featured project-clickable" id="researchCard" role="button" tabindex="0" aria-haspopup="dialog">
@@ -270,10 +219,6 @@
 
     </div>
 
-    <div class="sports-highlight">
-      <span class="highlight-icon">🏀</span>
-      <p>Balancing <strong>3 teams</strong> including school, church, and club shows the dedication and love for the game that Benjamin brings every day.</p>
-    </div>
 
   </section>
 
@@ -320,27 +265,25 @@
       <h3 class="modal-section-label">Project Materials</h3>
       <div class="modal-media-grid">
 
-        <div class="modal-media-card">
-          <div class="modal-media-placeholder media-paper">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            <span class="modal-upload-label">Paper coming soon</span>
+        <a class="modal-media-card modal-media-link" href="research.pdf" target="_blank" rel="noopener">
+          <div class="modal-media-placeholder media-paper media-available media-thumb">
+            <img src="research-thumb.jpg" alt="Research paper preview" class="slides-thumb-img" />
           </div>
           <div class="modal-media-info">
             <p class="media-title">Research Paper</p>
             <p class="media-sub">Full written report with citations and findings</p>
           </div>
-        </div>
+        </a>
 
-        <div class="modal-media-card">
-          <div class="modal-media-placeholder media-slides">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            <span class="modal-upload-label">Slides coming soon</span>
+        <a class="modal-media-card modal-media-link" href="slides.pdf" target="_blank" rel="noopener">
+          <div class="modal-media-placeholder media-slides media-available media-thumb">
+            <img src="slides-thumb.jpg" alt="Slides preview" class="slides-thumb-img" />
           </div>
           <div class="modal-media-info">
             <p class="media-title">Presentation Slides</p>
             <p class="media-sub">Visual slide deck with data and graphics</p>
           </div>
-        </div>
+        </a>
 
         <div class="modal-media-card">
           <div class="modal-media-placeholder media-video">
@@ -354,6 +297,30 @@
         </div>
 
       </div>
+    </div>
+  </div>
+
+  <!-- Civics Photo Modal -->
+  <div id="civicsModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Civics and Government Program" hidden>
+    <div class="modal-box cert-modal-box">
+      <button class="modal-close" id="civicsModalClose" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h2 class="modal-title">Civics and Government Program</h2>
+      <p class="modal-desc">US Branches, Bills &amp; Laws · 2026</p>
+      <img src="civics.jpg" alt="Civics and Government Program" class="cert-photo" />
+    </div>
+  </div>
+
+  <!-- Certificate Photo Modal -->
+  <div id="certModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Certificate of Promotion" hidden>
+    <div class="modal-box cert-modal-box">
+      <button class="modal-close" id="certModalClose" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h2 class="modal-title">Certificate of Promotion</h2>
+      <p class="modal-desc">Taylor Middle School · 2026</p>
+      <img src="certificate.jpg" alt="Certificate of Promotion" class="cert-photo" />
     </div>
   </div>
 

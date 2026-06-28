@@ -308,6 +308,68 @@ nav ul a:hover { color: var(--text); }
   margin: 0;
 }
 
+.award-card-clickable {
+  cursor: pointer;
+}
+
+.award-view-hint {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  opacity: 0.85;
+}
+
+.cert-modal-box {
+  max-width: 600px;
+  text-align: center;
+}
+
+.modal-media-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.modal-media-link:hover .media-available {
+  border-color: var(--accent);
+  background: rgba(59,158,255,0.1);
+}
+
+.media-available {
+  border: 2px solid rgba(59,158,255,0.3);
+  border-radius: 10px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.media-available .modal-upload-label {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.media-thumb {
+  padding: 0;
+  overflow: hidden;
+}
+
+.slides-thumb-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.cert-photo {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 1.2rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(59,158,255,0.1);
+}
+
 /* ── Hobbies ── */
 .hobbies { background: var(--mid); border-radius: var(--radius); }
 

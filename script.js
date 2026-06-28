@@ -49,6 +49,72 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && !researchModal.hasAttribute('hidden')) closeModal();
 });
 
+// ── Civics Modal ──
+const civicsCard       = document.getElementById('civicsCard');
+const civicsModal      = document.getElementById('civicsModal');
+const civicsModalClose = document.getElementById('civicsModalClose');
+
+function openCivicsModal() {
+  civicsModal.removeAttribute('hidden');
+  document.body.style.overflow = 'hidden';
+  civicsModalClose.focus();
+}
+
+function closeCivicsModal() {
+  civicsModal.setAttribute('hidden', '');
+  document.body.style.overflow = '';
+  civicsCard.focus();
+}
+
+civicsCard.addEventListener('click', openCivicsModal);
+
+civicsCard.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCivicsModal(); }
+});
+
+civicsModalClose.addEventListener('click', closeCivicsModal);
+
+civicsModal.addEventListener('click', (e) => {
+  if (e.target === civicsModal) closeCivicsModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !civicsModal.hasAttribute('hidden')) closeCivicsModal();
+});
+
+// ── Certificate Modal ──
+const certCard       = document.getElementById('certCard');
+const certModal      = document.getElementById('certModal');
+const certModalClose = document.getElementById('certModalClose');
+
+function openCertModal() {
+  certModal.removeAttribute('hidden');
+  document.body.style.overflow = 'hidden';
+  certModalClose.focus();
+}
+
+function closeCertModal() {
+  certModal.setAttribute('hidden', '');
+  document.body.style.overflow = '';
+  certCard.focus();
+}
+
+certCard.addEventListener('click', openCertModal);
+
+certCard.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCertModal(); }
+});
+
+certModalClose.addEventListener('click', closeCertModal);
+
+certModal.addEventListener('click', (e) => {
+  if (e.target === certModal) closeCertModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !certModal.hasAttribute('hidden')) closeCertModal();
+});
+
 // ── Smooth active nav link highlight on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('nav ul a');
